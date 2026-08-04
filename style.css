@@ -1,0 +1,269 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+      font-family: "Edu VIC WA NT Hand", cursive;
+
+}
+body{
+    background-color: #f5f5f5;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 1%;
+    background-color: white;
+    box-shadow: 0px 1px 5px black;
+    padding: 20px 5%;
+    border-radius: 1%;
+    
+}
+.brand{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.brandname{
+    margin-left: 10px;
+}
+.navlink{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    
+}
+.link{
+    color: black;
+    text-decoration: none;
+    
+}
+.link:hover{
+    color: brown;
+}
+#check{
+    display: none;
+}
+.icons{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
+    display: none;
+
+}
+.hero{
+    display: flex;
+    padding: 160px 5%;
+    gap: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.herotext{
+    flex: 1;
+    animation: fadein 1.5s ease;
+}
+.herotitle{
+    font-size: 55px;
+    margin-bottom: 15px;
+
+}
+.heropara{
+    margin-bottom: 15px;
+}
+.herobutton{
+    padding:15px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: 1s;
+    cursor: pointer;
+}
+.herobutton:hover{
+    background-color: black;
+    transform: scale(1.1);
+}
+.heroimage{
+    flex: 1;
+    padding: 0px;
+}
+.furniture{
+    width: 100%;
+    border-radius: 15px;
+
+}
+/* animation */
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translate(40px,40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+.products{
+    padding: 50px 8%;
+    text-align: center;
+}
+.producthead{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.productcontainer{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+   flex-wrap: wrap;
+}
+.card{
+    background-color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+}
+.card:hover{
+    transform: translateY(-30px);
+}
+
+.cardimg{
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+}
+.productname,.price{
+margin: 20px 0px;
+}
+
+.banner{
+    margin: 0px 8% 60px 8%;
+    padding: 0px 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.4) ,rgba(0, 0, 0, 0.4)), url(./images/sofa-living-room-interior-with-copy-space_43614-878.avif);
+background-size: cover;
+background-position:bottom;
+height: 600px;
+color: white;
+}
+.abouthead{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.aboutpara{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.aboutbutton{
+    font-size: 15px;
+    background-color: cornflowerblue;
+}
+.contact{
+    height: 200px;
+    background-color: white;
+    padding: 0px 8%;
+    box-shadow: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contacthead,.subhead{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.contactphn,.contactmail{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.socialicon{
+    margin-top: 20px;
+}
+.iconlink{
+    margin-right: 30px;
+    color: black;
+}
+.box{
+    display: flex;
+    gap: 10px;
+}
+.subinput{
+    width: 250px;
+}
+.subbutton{
+    color: white;
+    background-color: cornflowerblue;
+}
+.footer{
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: white;
+    text-align: center;
+}
+.banner,.contact{
+    height: fit-content;
+}
+
+
+
+/* media query/responsive */
+
+@media (max-width:768px){
+
+
+.brand{
+    font-size:15px;
+
+}
+.icons{
+    display: flex;
+}
+#cancelicon{
+    display: none;
+}
+#check:checked~.icons #menuicon{
+    display: none;
+
+}
+#check:checked~.icons #cancelicon{
+    display: flex;
+
+}
+.navlink{
+    position:absolute;
+    width: 100%;
+    top: 10%;
+    left:0%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+       }
+  #check:checked~.navlink{
+    display: block;
+    height: fit-content;
+  }  
+  .links{
+    text-align: center;
+    margin: 1.2rem 0px;
+    
+  }
+  .link{
+    color: white;
+  }
+  .hero{
+    flex-direction: column;
+    text-align: center;
+  }
+  .herotitle{
+    font-size: 35px;
+  }
+
+    
+}
